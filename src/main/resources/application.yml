@@ -1,0 +1,36 @@
+server:
+  port: 8081
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    hikari:
+      auto-commit: true
+      connection-test-query: SELECT 1
+      connection-timeout: 30000
+      idle-timeout: 30000
+      max-lifetime: 1800000
+      maximum-pool-size: 20
+      minimum-idle: 8
+      pool-name: DatebookHikariCP
+    type: com.zaxxer.hikari.HikariDataSource
+    password: root
+    url: jdbc:mysql://127.0.0.1:3306/mp?useUnicode=true&characterEncoding=UTF-8&serverTimezone=GMT%2B8
+    username: root
+
+#mybatis plus
+mybatis-plus:
+  mapper-locations: classpath*:/mapper/*.xml
+  #实体扫描，多个package用逗号或者分号分隔
+  type-aliases-package: com.qtxln.template.model.*
+  typeEnumsPackage: com.qtxln.template.model.enums
+  global-config:
+    #刷新mapper 调试神器
+    db-config:
+      logic-delete-field: deleted
+      logic-delete-value: 1
+      logic-not-delete-value: 0
+qtxln:
+  cors:
+    origins: '*'
+
+
