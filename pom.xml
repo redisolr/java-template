@@ -24,7 +24,7 @@
         <fastjson.version>1.2.62</fastjson.version>
         <commons-lang3.version>3.8.1</commons-lang3.version>
         <p6spy.version>3.8.7</p6spy.version>
-        <guava.version>28.2-jre</guava.version>
+        <guava.version>29.0-jre</guava.version>
         <commons.version>0.2.0</commons.version>
         <springfox-swagger2.version>2.8.0</springfox-swagger2.version>
         <springfox-swagger-ui.version>2.8.0</springfox-swagger-ui.version>
